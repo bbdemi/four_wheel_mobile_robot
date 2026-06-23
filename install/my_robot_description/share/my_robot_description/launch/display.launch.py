@@ -1,17 +1,29 @@
+import os
+
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.substitutions import Command
 from launch_ros.parameter_descriptions import ParameterValue
 from ament_index_python.packages import get_package_share_directory
-import os
 
 
 def generate_launch_description():
     pkg_path = get_package_share_directory('my_robot_description')
-    urdf_path = os.path.join(pkg_path, 'urdf', 'mobile_robot.urdf')
+
+    xacro_path = os.path.join(
+        pkg_path,
+        'urdf',
+        'mobile_robot.urdf.xacro'
+    )
+
+    rviz_config = os.path.join(
+        pkg_path,
+        'rviz',
+        'default.rviz'
+    )
 
     robot_description = ParameterValue(
-        Command(['cat ', urdf_path]),
+        Command(['xacro ', xacro_path]),
         value_type=str
     )
 
@@ -28,7 +40,8 @@ def generate_launch_description():
 
     rviz = Node(
         package='rviz2',
-        executable='rviz2'
+        executable='rviz2',
+        arguments=['-d', rviz_config]
     )
 
     return LaunchDescription([
