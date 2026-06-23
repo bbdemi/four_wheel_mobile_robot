@@ -1,0 +1,35 @@
+[0.008s] Invoking command in '/home/miko/mobile_robot_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/miko/mobile_robot_ws/src/my_robot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/miko/mobile_robot_ws/install/my_robot_description
+[0.022s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.127s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.140s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.200s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.200s] -- Added test 'lint_cmake' to check CMake code style
+[0.201s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.202s] -- Added test 'xmllint' to check XML markup files
+[0.203s] -- Configuring done
+[0.207s] -- Generating done
+[0.208s] -- Build files have been written to: /home/miko/mobile_robot_ws/build/my_robot_description
+[0.211s] Invoked command in '/home/miko/mobile_robot_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/miko/mobile_robot_ws/src/my_robot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/miko/mobile_robot_ws/install/my_robot_description
+[0.212s] Invoking command in '/home/miko/mobile_robot_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/miko/mobile_robot_ws/build/my_robot_description -- -j16 -l16
+[0.246s] Invoked command in '/home/miko/mobile_robot_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/miko/mobile_robot_ws/build/my_robot_description -- -j16 -l16
+[0.255s] Invoking command in '/home/miko/mobile_robot_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/miko/mobile_robot_ws/build/my_robot_description
+[0.261s] -- Install configuration: ""
+[0.262s] -- Execute custom install script
+[0.262s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/launch/display.launch.py
+[0.270s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/urdf/mobile_robot.urdf.xacro
+[0.278s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/ament_index/resource_index/package_run_dependencies/my_robot_description
+[0.286s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/ament_index/resource_index/parent_prefix_path/my_robot_description
+[0.294s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.sh
+[0.301s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.dsv
+[0.309s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/environment/path.sh
+[0.317s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/environment/path.dsv
+[0.325s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/local_setup.bash
+[0.333s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/local_setup.sh
+[0.341s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/local_setup.zsh
+[0.349s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/local_setup.dsv
+[0.357s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/package.dsv
+[0.365s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/ament_index/resource_index/packages/my_robot_description
+[0.372s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig.cmake
+[0.380s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig-version.cmake
+[0.388s] -- Symlinking: /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/package.xml
+[0.400s] Invoked command in '/home/miko/mobile_robot_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/miko/mobile_robot_ws/build/my_robot_description
