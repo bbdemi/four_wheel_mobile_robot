@@ -7,6 +7,25 @@
   <xacro:property name="wheellen" value="0.1" />
   <xacro:property name="wheeldia" value="0.07" />
   
+  <ros2_control name="GazeboSystem" type="system">
+
+  <hardware>
+    <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </hardware>
+
+  <joint name="left_front_wheel_joint">
+    <command_interface name="velocity"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+  <joint name="right_front_wheel_joint">
+    <command_interface name="velocity"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+
+</ros2_control>
 <xacro:macro name="default_inertial" params="mass">
   <inertial>
     <mass value="${mass}"/>
@@ -65,7 +84,7 @@
   <xacro:default_inertial mass="0.5"/>
     </link>
     
-     <joint name="$base_to_${name}" type="continuous">
+     <joint name="${name}_joint" type="continuous">
       <axis xyz="0 1 0" rpy="0 0 0" />
       <parent link="base_link"/>
       <child link="${name}"/>
@@ -77,6 +96,10 @@
 <xacro:wheel name="right_back_wheel"  x="-0.15" y="-0.17"/>
 <xacro:wheel name="left_front_wheel"  x="0.15" y="0.17"/>
 <xacro:wheel name="left_back_wheel"   x="-0.15" y="0.17"/>
-
+<gazebo>
+  <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+    <parameters>/home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/config/controllers.yaml</parameters>
+  </plugin>
+</gazebo>
 </robot>
 

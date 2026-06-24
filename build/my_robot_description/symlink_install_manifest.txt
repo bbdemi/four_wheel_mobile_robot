@@ -1,6 +1,8 @@
 /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/launch/display.launch.py
 /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/launch/gazebo.launch.py
 /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/urdf/mobile_robot.urdf.xacro
+/home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/rviz/default.rviz
+/home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/config/controllers.yaml
 /home/miko/mobile_robot_ws/install/my_robot_description/share/ament_index/resource_index/package_run_dependencies/my_robot_description
 /home/miko/mobile_robot_ws/install/my_robot_description/share/ament_index/resource_index/parent_prefix_path/my_robot_description
 /home/miko/mobile_robot_ws/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.sh

@@ -18,6 +18,11 @@ def generate_launch_description():
         Command(['xacro ', xacro_path]),
         value_type=str
     )
+    controllers_file = os.path.join(
+    pkg_path,
+    'config',
+    'controllers.yaml'
+)
 
     gazebo_launch = os.path.join(
         get_package_share_directory('gazebo_ros'),
