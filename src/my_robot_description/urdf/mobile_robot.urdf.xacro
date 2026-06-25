@@ -2,6 +2,7 @@
 <robot name="macroed" xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:include filename="$(find my_robot_description)/urdf/sensors/lidar.xacro"/>
+  <xacro:include filename="$(find my_robot_description)/urdf/sensors/camera.xacro"/>
   <xacro:property name="length" value="0.4" />
   <xacro:property name="width" value="0.25" />
   <xacro:property name="height" value="0.1" />
@@ -96,6 +97,10 @@
     parent_link="base_link"
     xyz="0.15 0 0.12"
     rpy="0 0 0"/>
+    <xacro:camera_sensor
+  parent_link="base_link"
+  xyz="0.20 0 0.14"
+  rpy="0 0 0"/>
   
 <xacro:wheel name="right_front_wheel" x="0.15" y="-0.17"/>
 <xacro:wheel name="right_back_wheel"  x="-0.15" y="-0.17"/>
