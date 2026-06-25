@@ -315,8 +315,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "launch" "urdf" "rviz" "config" "DESTINATION" "share/my_robot_description")
-ament_cmake_symlink_install_directory("/home/miko/mobile_robot_ws/src/my_robot_description" DIRECTORY "launch" "urdf" "rviz" "config" "DESTINATION" "share/my_robot_description")
+# install(DIRECTORY "launch" "urdf" "rviz" "config" "worlds" "DESTINATION" "share/my_robot_description")
+ament_cmake_symlink_install_directory("/home/miko/mobile_robot_ws/src/my_robot_description" DIRECTORY "launch" "urdf" "rviz" "config" "worlds" "DESTINATION" "share/my_robot_description")
 
 # install(FILES "/home/miko/mobile_robot_ws/build/my_robot_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/my_robot_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/miko/mobile_robot_ws/src/my_robot_description" FILES "/home/miko/mobile_robot_ws/build/my_robot_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/my_robot_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

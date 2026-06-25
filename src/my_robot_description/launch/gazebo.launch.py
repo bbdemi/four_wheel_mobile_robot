@@ -12,32 +12,51 @@ from ament_index_python.packages import get_package_share_directory
 def generate_launch_description():
     pkg_path = get_package_share_directory('my_robot_description')
 
-    xacro_path = os.path.join(pkg_path, 'urdf', 'mobile_robot.urdf.xacro')
+    xacro_path = os.path.join(
+        pkg_path,
+        'urdf',
+        'mobile_robot.urdf.xacro'
+    )
 
     robot_description = ParameterValue(
         Command(['xacro ', xacro_path]),
         value_type=str
     )
-    controllers_file = os.path.join(
-    pkg_path,
-    'config',
-    'controllers.yaml'
-)
 
-    gazebo_launch = os.path.join(
-        get_package_share_directory('gazebo_ros'),
-        'launch',
-        'gazebo.launch.py'
+    controllers_file = os.path.join(
+        pkg_path,
+        'config',
+        'controllers.yaml'
+    )
+
+    world_path = os.path.join(
+        pkg_path,
+        'worlds',
+        'obstacle_world.world'
     )
 
     gazebo = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(gazebo_launch)
+        PythonLaunchDescriptionSource([
+            os.path.join(
+                get_package_share_directory('gazebo_ros'),
+                'launch',
+                'gazebo.launch.py'
+            )
+        ]),
+        launch_arguments={
+            'world': world_path
+        }.items()
     )
 
     robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
-        parameters=[{'robot_description': robot_description}]
+        parameters=[
+            {
+                'robot_description': robot_description
+            }
+        ],
+        output='screen'
     )
 
     spawn_robot = Node(
